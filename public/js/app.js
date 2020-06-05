@@ -17,7 +17,7 @@ weatherForm.addEventListener('submit', (e) => {
                 messageOne.textContent = data.error
             } else {
                 messageOne.textContent = data.location
-                messageTwo.textContent = 'Right now it is ' + data.description + ' and ' + data.temperature + ' degrees'
+                messageTwo.textContent = 'Right now it is ' + data.description + ' and ' + data.temperature + ' degrees. The humidity is ' + data.humidity + ' percent and the windspeed is ' + data.windspeed + ' miles per hour.'
             }
         })
     })
