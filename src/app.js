@@ -6,6 +6,7 @@ const geocode = require('./utils/geocode')
 
 // create the express application
 const app = express()
+const port = process.env.PORT || 4000
 
 // these are Express config setups for static content and handlebars views/templating
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -100,6 +101,6 @@ app.get('*', (req, res) => {
     })
 })
 
-app.listen(4000, () => {
-    console.log('Server is running on port: 4000')
+app.listen(port, () => {
+    console.log('Server is running on port: ' + port)
 })
